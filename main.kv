@@ -1,0 +1,356 @@
+<MyLayout>
+	BoxLayout:
+		orientation: "vertical"
+		size: root.width, root.height
+
+		GridLayout:
+			cols: 3
+			rows: 8
+
+			ToggleButton:
+				id: DHSS
+				text: "DHSS"
+				halign: "center"
+				font_size: 16
+				size_hint: (3, 8/70)
+				readonly: True
+				group : 'method'
+				state: 'down'
+				disabled: True
+				on_press : root.set_DHSS()
+
+			ToggleButton:
+				id: black_book
+				text: "Black Book"
+				halign: "center"
+				font_size: 16
+				size_hint: (3, 8/70)
+				readonly: True
+				group : 'method'
+
+			ToggleButton:
+				id: CLB
+				text: "CLB"
+				halign: "center"
+				font_size: 16
+				size_hint: (3, 8/70)
+				readonly: True
+				group : 'method'
+				on_press : root.set_CLB()
+
+			Button:
+				id: right_one_k
+				text: "1kHz: "
+				halign: "left"
+				background_color: (157/255, 157/255, 157/255, 1)
+				font_size: 16
+				size_hint: (.3, 4/70)
+				readonly: True
+				on_press: root.right_one()
+			
+			Button:
+				id: left_one_k
+				text: "1kHz: "
+				halign: "right"
+				valign: "middle"
+				font_size: 16
+				size_hint: (.3, 4/70)
+				readonly: True
+				background_color: (157/255, 157/255, 157/255, 1)
+				on_press: root.left_one()
+
+			Button:
+				id: age_input
+				text: "Age: "
+				halign: "center"
+				background_color: (157/255, 157/255, 157/255, 1)
+				font_size: 16
+				size_hint: (.3, 4/70)
+				readonly: True
+				on_press: root.press_age()
+			
+			Button:
+				id: right_two_k
+				text: "2kHz: "
+				halign: "left"
+				background_color: (157/255, 157/255, 157/255, 1)
+				font_size: 16
+				size_hint: (.3, 4/70)
+				readonly: True
+				on_press: root.right_two()
+
+			Button:
+				id: left_two_k
+				text: "2kHz: "
+				halign: "right"
+				valign: "center"
+				font_size: 16
+				size_hint: (.3, 4/70)
+				readonly: True
+				background_color: (157/255, 157/255, 157/255, 1)
+				on_press: root.left_two()
+
+			ToggleButton:
+				id: male_button
+				text: "Male"
+				halign: "center"
+				valign: "center"
+				font_size: 16
+				size_hint: (.3, 4/70)
+				readonly: True
+				background_color: (157/255, 157/255, 157/255, 1)
+				group : 'sex'
+				on_press: root.male_press()
+			
+			Button:
+				id: right_three_k
+				text: "3kHz: "
+				halign: "left"
+				background_color: (157/255, 157/255, 157/255, 1)
+				font_size: 16
+				size_hint: (.3, 4/70)
+				readonly: True
+				on_press: root.right_three()
+
+			Button:
+				id: left_three_k
+				text: "3kHz: "
+				halign: "right"
+				valign: "center"
+				font_size: 16
+				size_hint: (.3, 4/70)
+				readonly: True
+				background_color: (157/255, 157/255, 157/255, 1)
+				on_press: root.left_three()
+
+			ToggleButton:
+				id: female_button
+				text: "Female"
+				halign: "center"
+				valign: "center"
+				font_size: 16
+				size_hint: (.3, 4/70)
+				readonly: True
+				background_color: (157/255, 157/255, 157/255, 1)
+				group : 'sex'
+				on_press: root.female_press()
+
+			Button:
+				id: right_four_k
+				text: "4kHz: "
+				halign: "left"
+				background_color: (157/255, 157/255, 157/255, 1)
+				font_size: 16
+				size_hint: (.3, 4/70)
+				readonly: True
+				on_press: root.right_four()
+
+			Button:
+				id: left_four_k
+				text: "4kHz: "
+				halign: "right"
+				valign: "center"
+				font_size: 16
+				size_hint: (.3, 4/70)
+				readonly: True
+				background_color: (157/255, 157/255, 157/255, 1)
+				on_press: root.left_four()
+
+			ToggleButton:
+				id: twenty_five_button
+				text: "25%"
+				halign: "center"
+				valign: "center"
+				font_size: 16
+				size_hint: (.3, 4/70)
+				readonly: True
+				background_color: (157/255, 157/255, 157/255, 1)
+				group : 'percent'
+				on_press : root.twenty_five_press()
+
+			Button:
+				id: right_six_k
+				text: "6kHz: "
+				halign: "left"
+				background_color: (157/255, 157/255, 157/255, 1)
+				font_size: 16
+				size_hint: (.3, 4/70)
+				readonly: True
+				on_press: root.right_six()
+				
+			Button:
+				id: left_six_k
+				text: "6kHz: "
+				halign: "right"
+				valign: "center"
+				font_size: 16
+				size_hint: (.3, 4/70)
+				readonly: True
+				background_color: (157/255, 157/255, 157/255, 1)
+				on_press: root.left_six()
+
+			ToggleButton:
+				id: fifty_button
+				text: "50%"
+				halign: "center"
+				valign: "center"
+				font_size: 16
+				size_hint: (.3, 4/70)
+				readonly: True
+				background_color: (157/255, 157/255, 157/255, 1)
+				group : 'percent'
+				on_press : root.fifty_press()
+
+			Button:
+				id: right_eight_k
+				text: "8kHz: "
+				halign: "left"
+				background_color: (157/255, 157/255, 157/255, 1)
+				font_size: 16
+				size_hint: (.3, 4/70)
+				readonly: True
+				on_press: root.right_eight()
+
+			Button:
+				id: left_eight_k
+				text: "8kHz: "
+				halign: "right"
+				valign: "center"
+				font_size: 16
+				size_hint: (.3, 4/70)
+				readonly: True
+				background_color: (157/255, 157/255, 157/255, 1)
+				on_press: root.left_eight()
+
+			ToggleButton:
+				id: seventy_five_button
+				text: "75%"
+				halign: "center"
+				valign: "center"
+				font_size: 16
+				size_hint: (.3, 4/70)
+				readonly: True
+				background_color: (157/255, 157/255, 157/255, 1)
+				group : 'percent'
+				on_press : root.seventy_five_press()
+			
+			Button:
+				text: "Right"
+				font_size: 16
+				size_hint: (.3, 4/70)
+				readonly: True
+				on_press: root.press_one_k()
+
+			Button:
+				text: "Left"
+				font_size: 16
+				size_hint: (.3, 4/70)
+				readonly: True
+				on_press: root.press_one_k()
+
+		GridLayout:
+			cols: 3
+			rows: 4			
+
+			# Row
+			Button:
+				id: nine
+				size_hint: (.3, .12)
+				font_size: 16
+				text: "9"
+				background_color: (157/255, 157/255, 157/255, 1)
+				on_press: root.nine()
+
+			Button:
+				id: eight
+				size_hint: (.3, .12)
+				font_size: 16
+				text: "8"
+				background_color: (157/255, 157/255, 157/255, 1)
+				on_press: root.eight()
+
+			Button:
+				id: seven
+				size_hint: (.3, .12)
+				font_size: 16
+				text: "7"
+				background_color: (157/255, 157/255, 157/255, 1)
+				on_press: root.seven()
+
+			# Row
+			Button:
+				id: six
+				size_hint: (.3, .12)
+				font_size: 16
+				text: "6"
+				background_color: (157/255, 157/255, 157/255, 1)
+				on_press: root.six()
+
+			Button:
+				id: five
+				size_hint: (.3, .12)
+				font_size: 16
+				text: "5"
+				background_color: (157/255, 157/255, 157/255, 1)
+				on_press: root.five()
+
+			Button:
+				id: four
+				size_hint: (.3, .12)
+				font_size: 16
+				text: "4"
+				background_color: (157/255, 157/255, 157/255, 1)
+				on_press: root.four()
+
+			# Row
+			Button:
+				id: three
+				size_hint: (.3, .12)
+				font_size: 16
+				text: "3"
+				background_color: (157/255, 157/255, 157/255, 1)
+				on_press: root.three()
+
+			Button:
+				id: two
+				size_hint: (.3, .12)
+				font_size: 16
+				text: "2"
+				background_color: (157/255, 157/255, 157/255, 1)
+				on_press: root.two()
+
+			Button:
+				id: one
+				size_hint: (.3, .12)
+				font_size: 16
+				text: "1"
+				background_color: (157/255, 157/255, 157/255, 1)
+				on_press: root.one()
+
+			Button:
+				id: enter
+				size_hint: (.3, .12)
+				font_size: 16
+				text: "Enter"
+				on_press: root.enter_press()
+
+			Button:
+				id: zero
+				size_hint: (.3, .12)
+				font_size: 16
+				text: "0"
+				background_color: (157/255, 157/255, 157/255, 1)
+				on_press: root.zero()
+
+			Button:
+				id: back
+				size_hint: (.3, .12)
+				font_size: 16
+				text: "<-"
+				on_press: root.press_back()
+
+<Button>:
+	background_color: 1, 0, 0
+	md_bg_color_disabled: [0,0,0,0]
+	background_down: 'atlas://data/images/defaulttheme/button'
+    border: (2, 2, 2, 2)
