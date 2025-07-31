@@ -1,7 +1,7 @@
 [app]
 
 # (str) Title of your application
-title = DHSS Method for Noise Induced Hearing Loss
+title = DHSS and CBL Method for Noise Induced Hearing Loss
 
 # (str) Package name
 package.name = hearingTestApp

@@ -205,7 +205,6 @@ class MyLayout(Widget):
        
 
    def set_CLB(root):
-       root.ids.black_book.disabled = False
        root.ids.DHSS.disabled = False
        root.ids.CLB.disabled = True
 
@@ -219,7 +218,6 @@ class MyLayout(Widget):
        root.set_out()
    
    def set_DHSS(root):
-       root.ids.black_book.disabled = False
        root.ids.DHSS.disabled = True
        root.ids.CLB.disabled = False
 

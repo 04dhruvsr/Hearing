@@ -20,15 +20,6 @@
 				on_press : root.set_DHSS()
 
 			ToggleButton:
-				id: black_book
-				text: "Black Book"
-				halign: "center"
-				font_size: 16
-				size_hint: (3, 8/70)
-				readonly: True
-				group : 'method'
-
-			ToggleButton:
 				id: CLB
 				text: "CLB"
 				halign: "center"
@@ -37,6 +28,15 @@
 				readonly: True
 				group : 'method'
 				on_press : root.set_CLB()
+
+			Button:
+				id: clear
+				text: "Clear"
+				halign: "center"
+				font_size: 16
+				size_hint: (3, 8/70)
+				readonly: True
+				on_press : root.set_out()
 
 			Button:
 				id: right_one_k
